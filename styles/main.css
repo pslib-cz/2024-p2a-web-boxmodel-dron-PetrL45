@@ -18,7 +18,7 @@
     }
     .page__logo::before {
         content: "";
-        display: block;
+        display: inline-block;
         background: center / contain no-repeat transparent;
         /*
         background-position: center;
@@ -41,59 +41,80 @@
     display: block;
     width: 100%;
    }
-   a :hover{
-       color: var(--black);
+   .page__header{
+       background-image: url(../images/header-2560w.webp);
+       background-size: cover;
+       background-position: top bottom;
+       padding: 1em;
+   }
+   .page__header h1{
+       font-weight: 700;
+       font-size: 4em;
     }
-    header{
-        color: var(--light);
-        margin: auto;
-        padding: 5em;
-        background-image: url("../images/header-2560w.jpg");
-    }
-    header h1{
-        font-weight: 700;
-        font-size: 4em;
-    }
-   header a{
-       font-size: small;
-       color: var(--black);
-       text-decoration: none;
-    }
-    header a:hover{
-        color:var(--light)
-    }
-    header p{
+    .page__header p{
         text-align: left;
-        margin-right: 50%;
         font-weight: 300;
         font-size: small;
-        padding-bottom: 3em;
+    }
+    .page__header a{
+        font-size: small;
+        color: var(--black);
+        text-decoration: none;
+    }
+    .page__header a:hover{
+        color:var(--light)
+    }
+    .page__logo-container{
+        text-align: center;
+    }
+    .page__logo{
+        display: inline-block;
+        padding: 1em;
+    }
+    .page__intro{
+        color: var(--light);
+     }
+    .button{
+        display: inline-block;
+        background-color: var(--primary, teal);
+        color: var(--light, white);
+        padding: 1em 2em;
+        border-radius: 0.5em;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .button :hover{
+        text-decoration: underline;
+    }
+    .button--light{
+        background-color: var(--light, white);
+        color: var(--black, black);
     }
     main{
-        margin: 25em;
-        margin-top: 1em;
-        padding: 3em;
         font-size: small;
         font-weight: 500;
     }
     main .border{
-        border: 3px solid rgb(5, 218, 218);
+        border: 3px solid var(--primary);
         padding: 1.25em;
     }
+   h2{
+    font-size: 2em;
+   }
     li::marker{
-        color: rgb(5, 218, 218);
+        color: var(--primary);
     }
     figcaption{
         padding-top: 1.15em;
         text-align: center;
         font-size: smaller;
     }
-    footer{
+    .page__footer{
      text-align: center;
      background-color: var(--gray);
      color: var(--light);
     }
-    footer p{
+    .page__footer p{
      color: var(--light);
      text-decoration: none;
      font-weight: 300;
@@ -102,18 +123,7 @@
     .page_section p{
         padding-bottom: 1.5em;
     }
-    .page_section a{
-    text-decoration: none;
-    color: var(--light);
-    border-radius: 5px;
-    background: rgb(4, 199, 199);
-    padding: 10px;
-   }
-   h2{
-    font-size: 2em;
-   }
    .container{
     display: flex;
-    
    }
 }
