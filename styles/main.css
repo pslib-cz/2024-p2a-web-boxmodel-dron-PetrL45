@@ -40,6 +40,7 @@
    .image-responsive{
     display: block;
     width: 100%;
+    margin: 0.5em 0;
    }
    .page__header{
        background-image: url(../images/header-2560w.webp);
@@ -139,6 +140,9 @@
         padding: 1em;
         max-width: 24em;
         display: inline-block;
+    }
+    .container{
+        min-width: 328px;
     }
     .page__footer{
      text-align: center;
