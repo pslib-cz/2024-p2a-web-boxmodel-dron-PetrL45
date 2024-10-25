@@ -51,11 +51,14 @@
    .page__header h1{
        font-weight: 700;
        font-size: 4em;
+       margin: 0;
     }
     .page__header p{
         text-align: left;
         font-weight: 300;
-        font-size: small;
+        font-size: 1em;
+        padding: 0 0 1em 0;
+        margin-top: 0.75em;
     }
     .page__header a{
         font-size: small;
@@ -77,6 +80,8 @@
     }
     .page__intro{
         color: var(--light);
+        max-width: 768px;
+        padding: 3em 1.5em;
      }
     .button{
         display: inline-block;
@@ -112,23 +117,28 @@
         background-color: var(--gray, gray);
         color: var(--light, white);
         text-align: center;
-        padding: 1em;
+        padding: 4em;
     }
    h2{
     font-size: 2em;
    }
-   .page_section{
-    padding: 1em 0;
+   .podnadpis{
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
    }
-   .page_section p{
-       padding-bottom: 1.5em;
+   .podnadpis--bigger{
+    font-size: 1.5em;
+   }
+   .page_section{
+    padding: 1em;
    }
     .list > li::marker{
         color: var(--primary);
     }
     .picture-box{
         margin: 0;
-        padding-bottom: 1em;
+        padding-bottom: 1.25em;
     }
     .picture-box__title{
         font-size: 0.8em;
@@ -141,8 +151,19 @@
         max-width: 24em;
         display: inline-block;
     }
-    .container{
-        min-width: 328px;
+    .gallery__item{
+        display: block;
+        margin: 0.5em 0;
+    }
+    @media (min-width: 768px){
+        .gallery__item{
+            display: inline-block;
+            width: calc(50% - 2 * 0.5em);
+        }
+        .gallery__item--100w{
+            display: inline-block;
+            width: calc(100% - 2 * 0.5em);
+        }
     }
     .page__footer{
      text-align: center;
